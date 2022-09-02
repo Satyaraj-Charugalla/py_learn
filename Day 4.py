@@ -15,6 +15,7 @@ def nth_root(rad, n):
 print(nth_root(27,3))
 """
 
+"""
 #When we don't know the number of args passed and we need only a limited number
 #then we can give a * before the parameter
 def arbi_func(*param):
@@ -23,3 +24,4 @@ def arbi_func(*param):
     print(x)
 
 arbi_func(10,11,12)
+"""
