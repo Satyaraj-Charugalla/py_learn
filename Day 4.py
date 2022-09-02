@@ -23,5 +23,15 @@ def arbi_func(*param):
     x = param[2] * param[1] # here we have taken the 2nd and the 1st arguments
     print(x)
 
-arbi_func(10,11,12)
+arbi_func(10,11,12) #The arguments are passes in a list format
+"""
+
+"""
+#This is also an arbitary function but this time the arguments are passed in a dictornary format
+def arbi_func_dict(**paramm):
+    print('This is an arbitary function with dictonary type arguments')
+    x = paramm['ac'] + " " + paramm['ad']
+    print('Hey there!,I am',x)
+
+arbi_func_dict(ab = "Ch", ac = "Satya", ad = "Raj") #The arguments are passed in a dictionary format
 """
