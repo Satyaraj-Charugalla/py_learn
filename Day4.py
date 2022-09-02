@@ -35,3 +35,12 @@ def arbi_func_dict(**paramm):
 
 arbi_func_dict(ab = "Ch", ac = "Satya", ad = "Raj") #The arguments are passed in a dictionary format
 """
+
+"""
+#The function can have a default value too!
+def default_func(name = 'Satya'):
+    print(name)
+
+default_func('Satyaraj')
+default_func()
+"""
