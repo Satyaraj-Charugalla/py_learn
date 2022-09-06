@@ -41,6 +41,7 @@ print(nl)
 print(replace(nl))
 """
 
+"""
 #Now if we the list is created in a function and then a list is created outside the function
 #while passing the argument the newly created list will be overwritten
 def call_from_out(k):
@@ -52,3 +53,4 @@ def call_from_out(k):
 l = [1,2,3]
 print(call_from_out(l))
 print(l)
+"""
