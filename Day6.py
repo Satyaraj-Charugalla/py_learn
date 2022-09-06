@@ -8,3 +8,5 @@ x = 25
 print('Value of X is :',x)
 print('Value of Y is :',y)
 """
+
+#But when a list is assigned then the value will be replaced
