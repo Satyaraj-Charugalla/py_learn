@@ -10,6 +10,7 @@ print('Value of X is :',x)
 print('Value of Y is :',y)
 """
 
+"""
 #But when a list is assigned then the value will be replaced
 #When a list is binded to a varible, then the list values can be replaced
 xx = [22,23,24,29]
@@ -18,3 +19,22 @@ print(yy)
 yy[1] = 1 #When a value inside the list is changed from a reference variable(yy), 
 #even then also the value gets replaced and xx will refer to the new list
 print(yy)
+"""
+"""
+nl=[1,2,3,34]
+def replace_value(g):
+    g[2] = 22
+    print(g)
+#Here we are rplacing the value inside the list but using a function; 
+#still it will be the same
+print(replace_value(nl)) 
+""" 
+
+nl=[1,2,3,34]
+def replace(g):
+    g = [6,7,8,9]
+    print(g)
+#Here we are trying to replace the entire list,but it won't be replaced. Instead the py interpreter
+#will create another new list for g
+print(nl)
+print(replace(nl))
