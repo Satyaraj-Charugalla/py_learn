@@ -30,11 +30,27 @@ def replace_value(g):
 print(replace_value(nl)) 
 """ 
 
+"""
 nl=[1,2,3,34]
 def replace(g):
     g = [6,7,8,9]
     print(g)
 #Here we are trying to replace the entire list,but it won't be replaced. Instead the py interpreter
-#will create another new list for g
+#will create another new list for g and over write with the new list created
 print(nl)
 print(replace(nl))
+"""
+
+"""
+#Now if we the list is created in a function and then a list is created outside the function
+#while passing the argument the newly created list will be overwritten
+def call_from_out(k):
+    k[0]=21
+    k[1]=22
+    k[2]=23
+    print(k)
+
+l = [1,2,3]
+print(call_from_out(l))
+print(l)
+"""
