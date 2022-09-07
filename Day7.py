@@ -18,7 +18,7 @@ def glob_fun():
     print(glob) #Printing the variable
 
 def update_glob_fun1(c):
-    global glob
+    global glob #
     glob = c
     return glob
 
