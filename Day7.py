@@ -13,6 +13,7 @@ print(update_glob_fun1(20))
 glob_fun()
 """
 
+"""
 glob = 'Hello' # Global variable
 def glob_fun():
     print(glob) #Printing the variable
@@ -24,3 +25,4 @@ def update_glob_fun1(c):
 
 glob_fun()
 print(update_glob_fun1(20))
+"""
