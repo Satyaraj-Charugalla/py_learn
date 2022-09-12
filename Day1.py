@@ -15,7 +15,7 @@
 #-----------------------------------
 
 #-----------While Loop--------------
-"""
+
 inn = int(input("Enter a value: "))
 while True:
     if inn % 7 ==0:
@@ -24,5 +24,5 @@ while True:
     else:
         print("Value not divisible by 7")
         break
-"""
-print("Hallow!")
+
+#print("Hallow!")
