@@ -1,11 +1,24 @@
 #------------Generattor Functions--------
-def gener246():
-    print('Yeilding 2')
-    yield 2
-    print('Yeilding 4')
-    yield 4
-    print('Yeilding 6')
-    yield 6
+def take(count,iterable):
+    counter = 0
+    for item in iterable:
+        if counter == count:
+            return
+        counter =+ 1
+        yield item
 
-g = gener246()
-next(g)
+
+def distinc(iterable):
+    seen = set()
+    for item in iterable:
+        if item in seen:
+            continue
+        yield item
+        seen.add(item)
+
+def pipe():
+    items = [3,6,9,22,34,12,22,3,6]
+    for item in take(3,distinc(items)):
+        print(item)
+
+pipe()
