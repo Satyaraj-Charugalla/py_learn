@@ -7,7 +7,9 @@ class Flights:
 """
 
 class marks:
-    def __init__(aaa,m1,m2,m3):
+    def __init__(aaa,m1,m2,m3):   #the init is called as 
+        #constructor and is used to bind the parameters to the arguments that are passed
+        # aaa here will bind the arguments to the parameters in method
         aaa.m1 = m1
         aaa.m2 = m2
         aaa.m3 = m3
