@@ -6,7 +6,7 @@ class Flights:
     pass
 """
 
-"""
+
 class marks:
     def __init__(aaa,m1,m2,m3):   
         # the init is called as Initialiser and is used to bind the parameters 
@@ -28,4 +28,3 @@ stud2 = marks(80,10,60)
 print (f'The avergae of the 2 students is {(stud1.sum()+stud2.sum())/2}')
 #print (f'The sum of the marks is {stud1.avg()}')
 #print (f'The sum of the marks is {stud1.sum()}')
-"""
