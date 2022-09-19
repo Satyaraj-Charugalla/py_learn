@@ -3,7 +3,7 @@ class Flights:
 
     #def flight_number(abc): #abc is a self
      #   return 'AB090909'
-    def __init__(self,fnumber):
+    def __init__(self,fnumber,aircaft): #Here we have called the class Aircaft from Flights
         if not fnumber[:2].isalpha():
             raise ValueError(f'Invalid air code {fnumber}')
         
@@ -12,7 +12,14 @@ class Flights:
         
         if not (fnumber[2:].isdigit() and fnumber[2:] < '9999'):
             raise ValueError(f'Invalid air code {fnumber}')
+
         self._flight_number = fnumber
+        self._aircraft = aircaft
+    
+    def plane_model(self):
+        return self._aircraft.plane_model()
+        #Here we are just returning the plane_model from the class Aircaft
+        # In a similar way we can call all the methods that are present in the Aircaft class
     
     def flight_number(self):
         return self._flight_number
