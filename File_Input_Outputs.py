@@ -14,8 +14,20 @@ f = open('Open_files.txt', mode = 'rt', encoding = 'utf-8')
 print(f.read(12)) # This will return the limited number of characters in the file mentioned
 f.close()
 """
+
+"""
 f = open('Open_files.txt', mode = 'rt', encoding = 'utf-8')
-print(f.readline())
-print(f.readline())
-f.seek(0)
-print(f.readlines())
+print(f.readline()) # will print 1st line 
+print(f.readline()) # will print 2nd line if exists
+f.seek(0) # will start from 0 which is it will start the from the begining
+print(f.readlines()) # will read all the line in the file
+f.close()
+"""
+
+f = open('Open_files.txt', mode = 'at', encoding = 'utf-8')
+f.writelines([
+    'Line 3 is added;\n'
+    'Line 4 is added;'
+    'Line 5 is added;\n'
+])
+f.close()
