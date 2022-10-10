@@ -21,3 +21,10 @@ for i in [23,11,211,433,22,3,22]:
     total = total + i
     print(i,'Sum with next----->',total)
 """
+
+"""Average of the list"""
+count = 0
+sum = 0
+for i in [23,11,211,433,22,3,22]:
+    count = count + 1
+    
