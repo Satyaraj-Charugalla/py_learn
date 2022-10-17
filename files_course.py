@@ -62,7 +62,9 @@ for space_remove in fhand:
 print(count)
 """
 
+"""
 fhand = open('Open_files.txt')
 for space_remove in fhand:
     space_remove = space_remove.rstrip()
     print(space_remove.upper())
+"""

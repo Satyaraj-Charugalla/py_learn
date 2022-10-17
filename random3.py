@@ -22,5 +22,5 @@ x = text.find("    ")
 #print(x)
 val = text[x+1:]
 z = float(val)
-print(type(z))
+#print(type(z))
 print(z)
