@@ -46,7 +46,7 @@ for space_remove in fhand:
         print(space_remove)
 """
 
-""""""
+"""
 fhand = input('Enter file name:')
 try:
     fhand = open(fhand)
@@ -60,3 +60,9 @@ for space_remove in fhand:
     if space_remove.startswith('It'):
         count = count + 1
 print(count)
+"""
+
+fhand = open('Open_files.txt')
+for space_remove in fhand:
+    space_remove = space_remove.rstrip()
+    print(space_remove.upper())
