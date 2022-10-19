@@ -32,9 +32,19 @@ for words in fhand:
     holder = words.rstrip().split()
     #print(holder)
     for word in holder:
-        if word not in num_of_times:
-            num_of_times[word] = 1
-        else:
-            num_of_times[word] = num_of_times[word]+1
+        num_of_times[word] = num_of_times.get(word, 0) + 1
+        #if word not in num_of_times:
+        #    num_of_times[word] = 1
+        #else:
+        #    num_of_times[word] = num_of_times[word]+1
 
-print(num_of_times)
+largest_count = None
+largest_word =None
+for lword, lcount in num_of_times.items():
+    # The items method will return the key value pairs in a tuple like [(key,value),(key,value)]
+    # So the lword and the lcount will itertate through the list of tuples and will compare
+    if largest_count is None or lcount > largest_count:
+        largest_count = lcount
+        largest_word = lword
+#print(num_of_times)
+print(largest_word,largest_count)
