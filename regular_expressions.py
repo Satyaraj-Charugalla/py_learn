@@ -39,6 +39,7 @@ print(f'Number of lines are {count}')
 """
 
 #----------------------------Extracting data using regex---------------------
+"""
 random_string = '2 plus 2 is 4 not 22'
 y = re.findall('[0-9]+',random_string) 
 # The [0-9]+ will search for any characters within the range 0 to 9 
@@ -46,4 +47,29 @@ y = re.findall('[0-9]+',random_string)
 z = re.findall('[^0-9]+',random_string)
 # The [^0-9]+ will return characters that do not fall within the range 0 to 9.Returns list
 print(y)
+print(z)
+"""
+
+"""
+#Greedy and non greedy search
+ranstring = 'From: This line: to that'
+y = re.findall('^F.+:',ranstring)
+# The output will be 'From: This line:'
+# This is called as greedy search it will nt stop with the From it searsch for the next colon(:)
+print(y)
+z = re.findall('^F.+?:',ranstring)
+# The output will be From: 
+# This search is called non - greedy search
+print(z)
+"""
+
+fhand = open('mbox-short.txt')
+count = 0
+z = []
+for lines in fhand:
+    if re.search('^From:',lines):
+        mail_ids = re.findall('\S+@\S+',lines)
+        z.append(mail_ids)
+        count = count + 1
+print(f'Number of emails {count}\n')
 print(z)
