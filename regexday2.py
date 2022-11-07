@@ -11,6 +11,7 @@ for lines in fhand:
 print(f'Number of emails {count}\n')
 print(z)
 """
+"""
 fhand = open('mbox-short.txt')
 count = 0
 z = []
@@ -22,3 +23,4 @@ for lines in fhand:
 
 print(f'Number of emails {count}\n')
 print(z)
+"""
