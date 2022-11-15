@@ -24,3 +24,7 @@ for lines in fhand:
 print(f'Number of emails {count}\n')
 print(z)
 """
+
+x = 'From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008'
+y = re.findall('@(\S+)', x) #This will extract the data after @ until a n empty space comes in
+print(y)
