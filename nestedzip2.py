@@ -1,4 +1,3 @@
-"""
 import zipfile, re, os
 
 #This code extracts all the zip files inside the zip file and writes into another folder
@@ -18,7 +17,7 @@ def extract_nested_zip(zippedFile, toFolder):
                 extract_nested_zip(fileSpec, root)
 
 extract_nested_zip("C:\\Users\\scharuga\\Downloads\\Testing_Zip.zip","C:\\Users\\scharuga\\Downloads\\TMobile_interviews")
-"""
+
 
 """
 from io import StringIO
@@ -54,8 +53,8 @@ def extract_nested_zipfile(path, parent_zip=None):
             return zipfile.ZipFile(path)
 """
 
+"""
 from zipfile import ZipFile
-
 def unpack_zip(zipfile='', path_from_local=''):
     filepath = path_from_local+zipfile
     extract_path = filepath.strip('.zip')+'/'
@@ -75,3 +74,4 @@ def unpack_zip(zipfile='', path_from_local=''):
     # you can just call this with filename set to the relative path and file.
 
 path = unpack_zip("C:\\Users\\scharuga\\Downloads","Testing_Zip.zip")
+"""
