@@ -33,7 +33,6 @@ for sub_directory_names in nested_zip_files_names:
     nested_zip_files_directories.append(st)
 print(nested_zip_files_directories)
 
-
 list_len = len(direct_list)
 if list_len > 0:
     print(f"The nested zip file has {list_len} zip files in it")
