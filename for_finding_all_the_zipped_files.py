@@ -11,7 +11,9 @@ direct_list = []
 for dirctore in Path(store_zip_extarct).glob("*.zip"):
     x = str(dirctore)
     direct_list.append(x)
+print(direct_list)
 
+"""
 # The below code will check the length of the list and will proceed further if the length is > 0.
 list_len = len(direct_list)
 if list_len > 0:
@@ -28,3 +30,4 @@ for remove_zip_files in Path(store_zip_extarct).glob("*.zip"):
         remove_zip_files.unlink()
     except OSError as e:
          print("Error: %s : %s" % (remove_zip_files, e.strerror))
+"""
