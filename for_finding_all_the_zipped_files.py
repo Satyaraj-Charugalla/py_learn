@@ -1,8 +1,8 @@
 from zipfile import ZipFile
 from pathlib import Path
 
-main_zip = "/dbfs/mnt/hirevue/Testing_Zip.zip"
-store_zip_extarct = "/dbfs/mnt/hirevue/Testing_Zip"
+main_zip = "C:\\Users\\scharuga\\Downloads\\Testing_Zip.zip"
+store_zip_extarct = "C:\\Users\\scharuga\\Downloads\\Unpack_Files"
 with ZipFile(main_zip, 'r') as zObject:
     zObject.extractall(path = store_zip_extarct)
 
@@ -11,7 +11,9 @@ direct_list = []
 for dirctore in Path(store_zip_extarct).glob("*.zip"):
     x = str(dirctore)
     direct_list.append(x)
+print(direct_list)
 
+"""
 # The below code will check the length of the list and will proceed further if the length is > 0.
 list_len = len(direct_list)
 if list_len > 0:
@@ -21,3 +23,11 @@ if list_len > 0:
             zipped.extractall(store_zip_extarct)
 else:
     print('No nested zip folders')
+
+# Code to remove the zip files from the directory
+for remove_zip_files in Path(store_zip_extarct).glob("*.zip"):
+    try:
+        remove_zip_files.unlink()
+    except OSError as e:
+         print("Error: %s : %s" % (remove_zip_files, e.strerror))
+"""
