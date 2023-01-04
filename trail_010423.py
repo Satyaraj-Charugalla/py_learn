@@ -14,6 +14,7 @@ for dirctore in Path(store_zip_extarct).glob("*.zip"):
     direct_list.append(x)
 print(f'Files location:\n{direct_list}')
 
+
 #To extarct the zip file names from the list
 nested_zip_files_names = []
 for x in direct_list:
@@ -33,13 +34,12 @@ for sub_directory_names in nested_zip_files_names:
     nested_zip_files_directories.append(st)
 print(f'Sub directory names:\n{nested_zip_files_directories}')
 
-#Extracting the zip files data
-list_len = len(direct_list)
-if list_len > 0:
-    #print(f"The nested zip file has {list_len} zip files in it")
-    for zip_list in direct_list:
-        with ZipFile(zip_list, 'r') as zipped:
-            z1 = zip_list.find('.')
-            zipped.extractall(zip_list[:z1])        
-else:
-    print('No nested zip folders')
+for zipfileloc in direct_list:
+    """
+    #print(zipfileloc)
+    z1 = zipfileloc.rfind(".")
+    print(f'Position of . is {z1}')
+    """
+    z1 = zipfileloc.rfind(".")
+    with ZipFile(zipfileloc, 'r') as zobj:
+        zobj.extractall(zipfileloc[:z1]) 
