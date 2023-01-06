@@ -1,11 +1,18 @@
 from zipfile import ZipFile
 from pathlib import Path
 import os
+import shutil
 
-main_zip = "C:\\Users\\scharuga\\Downloads\\Testing_Nested_Zip.zip"
-store_zip_extarct = "C:\\Users\\scharuga\\Downloads\\Unpack_Files"
+src_path = r"C:\\Users\\scharuga\\Downloads\\trails_03_06.zip"
+dst_path = r"C:\\Users\\scharuga\\Downloads\\Testing_Nested_Zip\\trails_03_06.zip"
+shutil.copy(src_path, dst_path)
+
+main_zip = "C:\\Users\\scharuga\\Downloads\\Testing_Nested_Zip\\trails_03_06.zip"
+store_zip_extarct = "C:\\Users\\scharuga\\Downloads\\Testing_Nested_Zip"
 with ZipFile(main_zip, 'r') as zObject:
     zObject.extractall(path = store_zip_extarct)
+#To remove the main zip file
+os.remove(main_zip)
 
 # The below code will append the file locations in the string format to the list
 direct_list = []
@@ -35,7 +42,7 @@ if list_len > 0:
         nested_zip_files_directories.append(st)
     #print(f'Sub directory names:\n{nested_zip_files_directories}')
 
-    #Extracting the zip files data
+    #Extracting the zip files data and deleting the nested zip folder
     for zip_list in direct_list:
         with ZipFile(zip_list, 'r') as zipped:
             z1 = zip_list.find('.')
@@ -47,5 +54,4 @@ if list_len > 0:
 else:
     print('No nested zip folders')
 
-#To remove the main zip file
-os.remove(main_zip)
+#os.remove(main_zip)
