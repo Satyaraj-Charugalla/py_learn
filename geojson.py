@@ -1,3 +1,8 @@
+"""
+The api or the json_url that is being used here needs a autentcation key.
+Hence it is not retriving anydata.
+The code is working fine but it is failng to authenticate.
+"""
 import urllib.request, urllib.parse, urllib.error
 import json
 
