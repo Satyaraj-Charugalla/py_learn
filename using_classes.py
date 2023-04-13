@@ -8,8 +8,7 @@ class foodie:
     # The method here will print out the name and colour of the fruit
     def show(self):
     # The word self is an instance to access all the attributes in the class
-        print(f'Fruit name is {self.fruitname}')
-        print(f'Fruit colour is {self.colur}')
+        print(f'Fruit name is "{self.fruitname}" and its colur is "{self.colur.lower()}"')
 
 fru_mango = foodie('Yellow','Mango')
 fru_avacado = foodie('Green','Avacado')
